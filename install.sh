@@ -5,8 +5,8 @@ chown :kvm /home/void/libvirt/images
 rmdir /var/lib/libvirt/images
 ln -s /home/void/libvirt/images /var/lib/libvirt/images
 ln -s /home/void/libvirt/isos /var/lib/libvirt/isos
-mkdir ~/.config/libvirt
-cp -rv /etc/libvirt/libvirt.conf ~/.config/libvirt/
+mkdir /home/void/.config/libvirt
+cp -rv /etc/libvirt/libvirt.conf /home/void/.config/libvirt/
 # uncomment uri_default = "qemu:///system"
 # in /etc/libvirt/qemu.conf set user = "void" group = "libvirt"
 ln -s /etc/sv/libvirtd /var/service/
