@@ -1,7 +1,8 @@
 xbps-install -y libvirt virt-manager qemu polkit
 usermod -aG libvirt,kvm void
-mkdir /home/void/libvirt
-mkdir /home/void/libvirt/{images,isos}
+for dir in images isos; do
+    mkdir -p /home/void/libvirt/$dir
+done
 chown :kvm /home/void/libvirt/images
 rmdir /var/lib/libvirt/images
 ln -s /home/void/libvirt/images /var/lib/libvirt/images
